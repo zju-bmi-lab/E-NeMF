@@ -14,7 +14,6 @@ from .render_utils import *
 from .run_nerf_helpers import *
 from tools.load_llff import *
 from tools.flow_utils import flow_to_image
-from tools.time_replayer import CycleHJSuperSloMo
 from tools.load_event import *
 def produce_frame(c2w, mul, time_list=None):
     T = []
@@ -234,7 +233,6 @@ def train():
     print(args.event_pose)
     args.event_pose = False
     args.interp_pose = True
-    args.eval_event = True
 
     # Load data
     if args.dataset_type == 'llff':
